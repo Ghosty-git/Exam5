@@ -1,0 +1,19 @@
+
+
+@mixin adapt($break) {
+    @if $break == tablet {
+        @media only screen and (max-width: 900px) {@content};
+    }
+    @if $break == phone {
+        @media only screen and (max-width: 775px) {@content};
+    }
+};
+
+@mixin flex($fd, $jc, $ai, $wrap, $gap) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $wrap;
+    gap: $gap;
+};

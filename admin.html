@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/index.css">
+</head>
+<body>
+
+    <div class="modal__layer">
+        <div class="modal__body">
+            <h1 class="modal__title">Create new item in shop</h1>
+
+            <div class="modal__form">
+                <div class="form__forms">
+                    <input type="text" name="" class="modal__input input__name" placeholder="name">
+                    <input type="text" name="" class="modal__input input__image" placeholder="image url">
+                    <input type="text" name="" class="modal__input input__ingredients" placeholder="ingredients">
+                    <input type="number" name="" class="modal__input input__InStock" placeholder="in stock">
+                    <input type="number" name="" class="modal__input input__cost" placeholder="cost">
+                </div>
+
+
+                <div class="hasDeliv">
+                    <span>Has delivery?</span>
+                    <input type="checkbox" class="checkbox">
+                </div>
+
+                <div class="modal__address">
+                    <h3>Address</h3>
+
+                    <input type="text" class="modal__input input__address" placeholder="Street">
+                    <input type="text" class="modal__input input__houseNum" placeholder="House number">
+                </div>
+
+            </div>  
+            <button class="addItemBtn">Add</button>
+        </div>
+    </div>
+<!-- 
+    <div class="delModalLayer">
+        <div class="del__body">
+            <p>Are you sure to delete <span class="nameForDelete">Name</span> ?</p>
+            <div class="del__btns">
+                <button class="del__btn closebtn">undo</button>
+                <button class="del__btn delBtn">yes</button>
+            </div>
+        </div>
+    </div> -->
+
+    <aside class="left__aside left">
+        <div class="left__content">
+            <span class="left__x">&times;</span>
+            <div class="left__top top">
+                <h3>Contact us</h3>
+                <span>+11 4783 4477 8999</span>
+                <p>Our delivery <br>working from 09:00 <br>to 23:00</p>
+            </div>
+            <div class="left__bottom">
+                <a href="index.html">Go to main page</a>
+            </div>
+        </div>
+    </aside>
+    
+    <header class="header">
+        <div class="header__content">
+            <div class="header__burger">
+                <img src="./media/components/header/bars.svg" alt="bars" class="burger__icon">
+            </div>
+            <div class="header__logo">
+                <img src="./media/components/header/logo.svg" alt="logo">
+            </div>
+            <div class="header__counter header__counter_admin">
+                <p>admin page</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin__main">
+        <div class="main__content admin__content">
+            <h1 class="title admin__title">Avaliable sweets</h1>
+
+            <div class="main__columns">
+            </div>
+
+            <button class="addBtn">Add new shop item</button>
+        </div>
+    </main>
+
+    <script src="./script/admin.js" type="module"></script>
+</body>
+</html>

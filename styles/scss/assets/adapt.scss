@@ -1,0 +1,9 @@
+
+@mixin adapt($break) {
+    @if $break == tablet {
+        @media only screen and (max-width: 1064) {@content};
+    }
+    @if $break == phone {
+        @media only screen and (max-width: 535px) {@content};
+    }
+}

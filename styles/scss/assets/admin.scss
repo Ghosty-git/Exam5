@@ -1,0 +1,227 @@
+@import './utiles.scss';
+
+.admin__main {
+    .admin__content {
+        padding: 80px;
+        .admin__title {
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-bottom: 36px;
+        }
+
+        .main__columns {
+
+            @include flex(column, unset, unset, nowrap, 7px);
+            .column {
+                @include flex(row, space-between, center, nowrap, 0px);
+                width: 825px;
+                padding: 15px 32px 21px 30px;
+                background-color: $columnBg;
+                &__left {
+                    @include flex(row, unset, center, nowrap, 23px);
+                    .column__name {
+                        font-size: 18px;
+                        line-height: 21px;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                        padding: 5px;
+                        background-color: $columnBg;
+                    }
+                    .enableField {
+                        background: #fff;
+                        border: 1px solid $purple;
+                    }
+                }
+                &__center {
+                    display: flex;
+                    align-items: center;
+                    margin-right: -125px;
+                    gap: 10px;
+                    span {
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-size: 14px;
+                        line-height: 16px;
+                        .column__cost {
+                            width: 75px;
+                            font-size: 18px;
+                            padding-left: 15px;
+                            line-height: 21px;
+                            padding: 5px;
+                            outline: none;
+                            border: none;
+                            color: #303E3D;
+                            background-color: $columnBg;
+                        }
+                        .enableField {
+                            background: #fff;
+                            border: 1px solid $purple;
+                        }
+                    }
+                }
+                &__right {
+                    @include flex(row, unset, center, nowrap, 54px);
+                    .right__left {
+                        display: flex;
+                        gap: 15px;
+                        span {
+                            font-size: 14px;
+                            line-height: 16px;
+                        }
+                        .inStock {
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
+                        .columnbtn {
+                            border: none;
+                            background-color: $columnBg;
+                        }
+                    }
+                }
+            }
+        }
+        .addBtn {
+            padding: 16px 40px;
+            background-color: $purple;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            margin-top: 48px;
+            line-height: 23px;
+        }
+    }
+}
+
+.modal__layer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    @include flex(unset, center, unset, nowrap, 0);
+    padding-top: 5%;
+    z-index:  -1;
+
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.5s;
+    .modal__body {
+        width: 468px;
+        height: 540px;
+        padding: 0px 62px;
+        padding-bottom: 60px;
+        background: $modalBodyBg;
+        .modal__title {
+            font-size: 20px;
+            text-align: center;
+            line-height: 23px;
+            margin-top: 55px;
+            margin-bottom: 30px;
+        }
+        .modal__form {
+            @include flex(column, unset, unset, nowrap, 0px);
+            .modal__input {
+                width: 344px;
+                border: #E4E4E4 1px solid;
+                background: #fff;
+                outline: none;
+                padding: 6px 10px;
+            }
+            .form__forms {
+                @include flex(column, unset, unset, nowrap, 14px);
+            }
+            .hasDeliv {
+                display: flex;
+                gap: 15px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+                align-items: center;
+                span {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+            .modal__address {
+                h3 {
+                    font-size: 16px;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                }
+                .input__address {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+        .addItemBtn {
+            margin-top: 15px;
+            padding: 5px 8px;
+            color: #fff;
+            background: $purple;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.editIconForName,
+.editIconForCost,
+.deleteBtn {
+    cursor: pointer;
+}
+
+// .delModalLayer{
+//     position: fixed;
+//     height: 100vh;
+//     width: 100%;
+//     background: rgba(0,0,0,0.5);
+//     @include flex(unset, center, center, nowrap, 0);
+//     z-index:  -1;
+
+//     visibility: hidden;
+//     opacity: 0;
+//     transition-duration: 0.5s;
+
+//     .del__body {
+//         width: 350px;
+//         padding: 20px;
+//         border-radius: 10px;
+//         background: #fff;
+//         text-align: center;
+//         @include flex(column, unset, unset, nowrap, 50px);
+//         p {
+//             font-size: 19px;
+//             margin-top: 20px;
+//         }
+//         .del__btns {
+//             @include flex(row, center, center, nowrap, 10px);
+//             margin-top: 20px;
+//             .del__btn {
+//                 padding: 8px 13px;
+//                 font-size: 18px;
+//                 border-radius: 5px;
+//                 background-color: #e3e3e3;
+//                 border: none;
+//                 &:hover {
+//                     background-color: #aeaeae;
+//                 }
+//             }
+//             .delBtn {
+//                 background-color: $purple;
+//                 color: #fff;
+//                 font-weight: 700;
+//                 &:hover {
+//                     background-color: #70355c;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.activeModal {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
